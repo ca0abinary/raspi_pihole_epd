@@ -32,8 +32,8 @@ crontab cronjobs
   - Main application, parses the output of `pihole chronometer` and displays on the result to the e-paper hat
 - display-web.py
   - Displays the website graph using selenium, webdriver, and imagemagick
-  - 4gray.png
-    - Support for converting images to 4 grey (from adafruit)
+  - 4gray.png <img src="4gray.png" height="24">
+    - Support for converting images to 4 grey (from [adafruit article](https://learn.adafruit.com/adafruit-eink-display-breakouts/drawing-bitmaps))
 - EPD support files
   - epd2in7.py - if you have another type of display this file can be swapped out
   - epdconfig.py - config file from waveshare
