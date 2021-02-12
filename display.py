@@ -4,7 +4,7 @@ import re, subprocess, epd2in7
 from datetime import datetime
 from PIL import Image,ImageDraw,ImageFont
 
-x = subprocess.run(['pihole', '-c', '-e'], capture_output=True)
+x = subprocess.run(['/usr/local/bin/pihole', '-c', '-e'], capture_output=True)
 y = re.sub('\x1B\[([0-9]{1,3}((;[0-9]{1,3})*)?)?[m|K]', '', x.stdout.decode())
 y = y.replace('\x1b[H\x1b[2J\x1b[3J', '')
 
