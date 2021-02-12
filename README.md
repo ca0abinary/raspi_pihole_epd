@@ -4,6 +4,13 @@
 
 Outputs the result of `pihole chronometer` to a [Waveshare 2.7 inch e-Paper hat](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT).
 
+## Enable SPI Interface on the Raspberry Pi
+
+Before connecting the e-paper display to the Raspberry Pi the SPI interface needs to be enabled. This can be accomplished by using the `raspi-config` command and selecting `Interfacing options -> SPI -> Yes`
+
+![main menu image](https://www.waveshare.com/w/upload/1/1e/RPI_open_spi.png)
+![interface menu image](https://www.waveshare.com/w/upload/1/1e/RPI_open_spi.png)
+
 ## Installation
 
 ```sh
