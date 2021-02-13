@@ -1,6 +1,6 @@
 # PiHole e-Paper Display
 
-![e-paper hat image](https://www.waveshare.com/w/thumb.php?f=2.7inch-e-paper-hat-3.jpg&width=300)
+![e-paper hat image](raspi_pihole_epd.jpg)
 
 Outputs the result of `pihole chronometer` to a [Waveshare 2.7 inch e-Paper hat](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT).
 
