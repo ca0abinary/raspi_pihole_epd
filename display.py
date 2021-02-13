@@ -18,7 +18,7 @@ font = ImageFont.truetype('FiraCode-Regular.ttf', 9)
 font_height = font.getsize('A')[1]
 ypos = 0
 for line in y.split('\n'):
-  draw.text((0,ypos), line, font = font, fill=0)
+  draw.text((0,ypos), line.replace('    (', '('), font = font, fill=0)
   ypos = ypos + font_height
 
 now = datetime.now().strftime('%c')
