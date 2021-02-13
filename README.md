@@ -37,4 +37,4 @@ crontab cronjobs
 - EPD support files
   - epd2in7.py - if you have another type of display this file can be swapped out
   - epdconfig.py - config file from waveshare
-  - font.ttc - font from waveshare
+  - FiraCore-Regular.ttf - mono-space font from the excellent [FiraCode project](https://github.com/tonsky/FiraCode). This can be swapped out for a standard font such as Roboto if the strings running off-screen bothers you. A mono-space font makes the chronometer output look nicer.

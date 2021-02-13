@@ -14,15 +14,20 @@ epd.Clear(0xFF)
 Himage = Image.new('1', (epd.height, epd.width), 255)
 draw = ImageDraw.Draw(Himage)
 
-font = ImageFont.truetype('font.ttc', 9)
+font = ImageFont.truetype('FiraCode-Regular.ttf', 9)
+font_height = font.getsize('A')[1]
 ypos = 0
 for line in y.split('\n'):
   draw.text((0,ypos), line, font = font, fill=0)
-  ypos = ypos + 9
+  ypos = ypos + font_height
 
-now = datetime.now()
+now = datetime.now().strftime('%c')
+now_width, now_height = font.getsize(now)
+throttled = subprocess.run(['/usr/bin/vcgencmd', 'get_throttled'], capture_output=True).stdout.decode()
+
 draw.rectangle((0,ypos,epd.height,epd.width), fill = 0)
-draw.text((0,ypos), now.strftime('%c'), font = font, fill = 1)
+draw.text((0,ypos), throttled, font = font, fill = 1)
+draw.text((epd.height - now_width, ypos), now, font = font, fill = 1)
 
 epd.display(epd.getbuffer(Himage))
 epd.sleep()
